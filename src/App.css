@@ -1,0 +1,446 @@
+.App {
+  text-align: center;
+}
+/* .App-header {
+  /* margin-left: ; */
+/* } */
+body {
+  font-family: "Open Sans";
+  margin: 0;
+  background-image: linear-gradient(120deg, #4f0088 0%, #000000 100%);
+  height: 100vh;
+}
+.titulo {
+  margin-top: 80px;
+  text-align: center;
+}
+.lorem {
+  margin: 30px;
+}
+.sercher {
+  width: 400px;
+}
+.movieHover {
+  transition: transform 1s; /* Animation */
+}
+
+.movieHover:hover {
+  transform: scale(1.3);
+  box-shadow: 0 0 2px 1px white;
+}
+.shaker:hover {
+  animation: shake 0.5s;
+  animation-iteration-count: infinite;
+}
+@keyframes shake {
+  0% {
+    transform: translate(1px, 1px) rotate(0deg);
+  }
+  10% {
+    transform: translate(-1px, -2px) rotate(-1deg);
+  }
+  20% {
+    transform: translate(-3px, 0px) rotate(1deg);
+  }
+  30% {
+    transform: translate(3px, 2px) rotate(0deg);
+  }
+  40% {
+    transform: translate(1px, -1px) rotate(1deg);
+  }
+  50% {
+    transform: translate(-1px, 2px) rotate(-1deg);
+  }
+  60% {
+    transform: translate(-3px, 1px) rotate(0deg);
+  }
+  70% {
+    transform: translate(3px, 1px) rotate(-1deg);
+  }
+  80% {
+    transform: translate(-1px, -1px) rotate(1deg);
+  }
+  90% {
+    transform: translate(1px, 2px) rotate(0deg);
+  }
+  100% {
+    transform: translate(1px, -2px) rotate(-1deg);
+  }
+}
+.imageModal {
+  width: 1300px;
+  background-color: black;
+}
+.modalProp {
+  background: rgb(0, 0, 0);
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 1) 11%,
+    rgba(36, 7, 44, 0.412) 50%,
+    rgba(0, 0, 0, 0.9516129032258065) 89%
+  );
+}
+.nonePeli {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px;
+  font-size: 30px;
+  color: white;
+}
+
+/* Comienzo Lo sentimos no hay ninguna pelicula */
+
+@import url("https://fonts.googleapis.com/css2?family=Staatliches&display=swap");
+
+.jt {
+  position: relative;
+  font-family: "Staatliches", sans-serif;
+  text-transform: uppercase;
+  font-display: swap;
+  text-shadow: 0 0 10px tomato;
+}
+
+.jt__row {
+  display: block;
+}
+.jt__row:nth-child(1) {
+  clip-path: polygon(-10% 75%, 110% 75%, 110% 110%, -10% 110%);
+}
+.jt__row:nth-child(2) {
+  clip-path: polygon(-10% 50%, 110% 50%, 110% 75.3%, -10% 75.3%);
+}
+.jt__row:nth-child(3) {
+  clip-path: polygon(-10% 25%, 110% 25%, 110% 50.3%, -10% 50.3%);
+}
+.jt__row:nth-child(4) {
+  clip-path: polygon(-10% 0%, 110% 0%, 110% 25.3%, -10% 25.3%);
+}
+
+.jt__row.jt__row--sibling {
+  position: absolute;
+  top: 0;
+  left: 0;
+  user-select: none;
+  width: 800px;
+}
+
+.jt__text {
+  display: block;
+  transform-origin: bottom left;
+  animation: moveIn 2s 0s cubic-bezier(0.36, 0, 0.06, 1) alternate infinite;
+}
+.jt__row:nth-child(1) .jt__text {
+  transform: translateY(-0.1em);
+}
+.jt__row:nth-child(2) .jt__text {
+  transform: translateY(-0.3em) scaleY(1.1);
+}
+.jt__row:nth-child(3) .jt__text {
+  transform: translateY(-0.5em) scaleY(1.2);
+}
+.jt__row:nth-child(4) .jt__text {
+  transform: translateY(-0.7em) scaleY(1.3);
+}
+.jt__row:nth-child(5) .jt__text {
+  transform: translateY(-0.9em) scaleY(1.4);
+}
+.jt__row:nth-child(6) .jt__text {
+  transform: translateY(-1.1em) scaleY(1.5);
+}
+
+@keyframes moveIn {
+  50%,
+  100% {
+    transform: translateY(0em);
+  }
+  0% {
+    opacity: 0;
+    filter: blur(10px);
+  }
+  100% {
+    opacity: 1;
+    filter: blur(0px);
+  }
+}
+/* Comienzo Netflix */
+.debug .jt__row:nth-child(even) {
+  color: black;
+  background: white;
+}
+.debug .jt__row:nth-child(odd) {
+  color: white;
+  background: black;
+}
+
+h2 {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  text-transform: uppercase;
+  font-size: 72px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 700;
+  color: #e50914;
+  letter-spacing: 2px;
+  text-shadow: 0px 0px 0 #be0000, 1px 1px 0 #be0000, 2px 2px 0 #be0000,
+    3px 3px 0 #be0000, 4px 4px 0 #be0000, 5px 5px 0 #be0000, 6px 6px 0 #be0000,
+    7px 7px 0 #cecece, 8px 8px 0 #cecece, 9px 9px 0 #cecece;
+  perspective: 1000px;
+  perspective-origin: center top;
+}
+.spanNetflix {
+  display: block;
+  transform-origin: top;
+}
+.spanNetflix:nth-child(1) {
+  transform: scaleY(1.2) rotateX(-5deg) rotateY(45deg);
+  margin-right: -8px;
+}
+
+.spanNetflix:nth-child(2) {
+  transform: scaleY(1.1) rotateX(-5deg) rotateY(22deg);
+}
+
+.spanNetflix:nth-child(3) {
+  transform: scaleY(1.05) rotateX(-5deg) rotateY(10deg);
+}
+
+.spanNetflix:nth-child(4) {
+  transform: scaleY(1.05);
+}
+
+.spanNetflix:nth-child(5) {
+  transform: scaleY(1.05) rotateX(-5deg) rotateY(-10deg);
+}
+
+.spanNetflix:nth-child(6) {
+  transform: scaleY(1.1) rotateX(-5deg) rotateY(-22deg);
+}
+
+.spanNetflix:nth-child(7) {
+  transform: scaleY(1.2) rotateX(-5deg) rotateY(-45deg);
+}
+.spanNetflix:nth-child(8) {
+  transform: scaleY(1.3) rotateX(-5deg) rotateY(-45deg);
+}
+/* Fin HackFlix */
+
+/* Comienzo Open */
+
+.divOpen {
+  /* position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 300px;
+  height: 100px;
+  margin: -50px 0 0 -150px;
+  text-align: center; */
+  border-radius: 8px;
+  border: 3px solid rgb(0, 40, 70);
+  cursor: pointer;
+}
+
+.divOpen:hover {
+  animation: border-flicker 2s linear forwards;
+}
+
+.h1Open {
+  font-family: "Open Sans";
+  font-weight: 300;
+  font-size: 50px;
+  color: rgba(120, 0, 50, 0.5);
+}
+
+.divOpen:hover h1 {
+  animation: text-flicker 2s linear forwards;
+}
+
+.divOpen:hover .first {
+  animation: letter-flicker 3s linear infinite;
+}
+
+@keyframes text-flicker {
+  2% {
+    color: rgb(230, 0, 120);
+    text-shadow: 0 0 15px rgb(230, 0, 120);
+  }
+  3% {
+    color: rgba(120, 0, 50, 0.5);
+    text-shadow: none;
+  }
+  6% {
+    color: rgb(230, 0, 120);
+    text-shadow: 0 0 15px rgb(230, 0, 120);
+  }
+  9% {
+    color: rgba(120, 0, 50, 0.5);
+    text-shadow: none;
+  }
+  11% {
+    color: rgb(230, 0, 120);
+    text-shadow: 0 0 15px rgb(230, 0, 120);
+  }
+  14% {
+    color: rgba(120, 0, 50, 0.5);
+    text-shadow: none;
+  }
+  18% {
+    color: rgb(230, 0, 120);
+    text-shadow: 0 0 15px rgb(230, 0, 120);
+  }
+  32% {
+    color: rgb(230, 0, 120);
+    text-shadow: 0 0 15px rgb(230, 0, 120);
+  }
+  33% {
+    color: rgba(120, 0, 50, 0.5);
+    text-shadow: none;
+  }
+  37% {
+    color: rgb(230, 0, 120);
+    text-shadow: 0 0 15px rgb(230, 0, 120);
+  }
+  39% {
+    color: rgba(120, 0, 50, 0.5);
+    text-shadow: none;
+  }
+  43% {
+    color: rgb(230, 0, 120);
+    text-shadow: 0 0 15px rgb(230, 0, 120);
+  }
+  46% {
+    color: rgba(120, 0, 50, 0.5);
+    text-shadow: none;
+  }
+  47% {
+    color: rgb(230, 0, 120);
+    text-shadow: 0 0 15px rgb(230, 0, 120);
+  }
+  100% {
+    color: rgb(230, 0, 120);
+    text-shadow: 0 0 15px rgb(230, 0, 120);
+  }
+}
+
+@keyframes letter-flicker {
+  2% {
+    color: rgb(230, 0, 120);
+    text-shadow: 0 0 15px rgb(230, 0, 120);
+  }
+  3% {
+    color: rgba(120, 0, 50, 0.5);
+    text-shadow: none;
+  }
+  6% {
+    color: rgb(230, 0, 120);
+    text-shadow: 0 0 15px rgb(230, 0, 120);
+  }
+  9% {
+    color: rgba(120, 0, 50, 0.5);
+    text-shadow: none;
+  }
+  11% {
+    color: rgb(230, 0, 120);
+    text-shadow: 0 0 15px rgb(230, 0, 120);
+  }
+  14% {
+    color: rgba(120, 0, 50, 0.5);
+    text-shadow: none;
+  }
+  18% {
+    color: rgb(230, 0, 120);
+    text-shadow: 0 0 15px rgb(230, 0, 120);
+  }
+  32% {
+    color: rgb(230, 0, 120);
+    text-shadow: 0 0 15px rgb(230, 0, 120);
+  }
+  33% {
+    color: rgba(120, 0, 50, 0.5);
+    text-shadow: none;
+  }
+  37% {
+    color: rgb(230, 0, 120);
+    text-shadow: 0 0 15px rgb(230, 0, 120);
+  }
+  39% {
+    color: rgba(120, 0, 50, 0.5);
+    text-shadow: none;
+  }
+  40% {
+    color: rgb(230, 0, 120);
+    text-shadow: 0 0 15px rgb(230, 0, 120);
+  }
+  100% {
+    color: rgb(230, 0, 120);
+    text-shadow: 0 0 15px rgb(230, 0, 120);
+  }
+}
+
+@keyframes border-flicker {
+  2% {
+    border: 3px solid rgb(0, 180, 230);
+    box-shadow: 0 0 15px -1px rgb(0, 180, 230),
+      0 0 12px -1px rgb(0, 180, 230) inset;
+  }
+  3% {
+    border: 3px solid rgb(0, 40, 70);
+    box-shadow: none;
+  }
+  5% {
+    border: 3px solid rgb(0, 180, 230);
+    box-shadow: 0 0 15px -1px rgb(0, 180, 230),
+      0 0 12px -1px rgb(0, 180, 230) inset;
+  }
+  6% {
+    border: 3px solid rgb(0, 40, 70);
+    box-shadow: none;
+  }
+  7% {
+    border: 3px solid rgb(0, 180, 230);
+    box-shadow: 0 0 15px -1px rgb(0, 180, 230),
+      0 0 12px -1px rgb(0, 180, 230) inset;
+  }
+  9% {
+    border: 3px solid rgb(0, 40, 70);
+    box-shadow: none;
+  }
+  13% {
+    border: 3px solid rgb(0, 180, 230);
+    box-shadow: 0 0 15px -1px rgb(0, 180, 230),
+      0 0 12px -1px rgb(0, 180, 230) inset;
+  }
+  16% {
+    border: 3px solid rgb(0, 40, 70);
+    box-shadow: none;
+  }
+  18% {
+    border: 3px solid rgb(0, 180, 230);
+    box-shadow: 0 0 15px -1px rgb(0, 180, 230),
+      0 0 12px -1px rgb(0, 180, 230) inset;
+  }
+  22% {
+    border: 3px solid rgb(0, 40, 70);
+    box-shadow: none;
+  }
+  34% {
+    border: 3px solid rgb(0, 180, 230);
+    box-shadow: 0 0 15px -1px rgb(0, 180, 230),
+      0 0 12px -1px rgb(0, 180, 230) inset;
+  }
+  36% {
+    border: 3px solid rgb(0, 40, 70);
+    box-shadow: none;
+  }
+  54% {
+    border: 3px solid rgb(0, 180, 230);
+    box-shadow: 0 0 15px -1px rgb(0, 180, 230),
+      0 0 12px -1px rgb(0, 180, 230) inset;
+  }
+  100% {
+    border: 3px solid rgb(0, 180, 230);
+    box-shadow: 0 0 15px -1px rgb(0, 180, 230),
+      0 0 12px -1px rgb(0, 180, 230) inset;
+  }
+}
